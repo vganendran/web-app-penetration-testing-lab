@@ -1,1 +1,5 @@
+user_id,username,role
+1001,alice,customer
+1002,bob,customer
+1003,admin1,administrator
 
