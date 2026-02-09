@@ -1,1 +1,56 @@
+timestamp,source,ip,username,event_type,endpoint,request,method,status,details
+2026-01-10 09:01:12,web,192.168.1.10,,PAGE_VIEW,/login,,GET,200,
+2026-01-10 09:01:45,auth,192.168.1.10,alice,LOGIN_FAIL,/login,,POST,401,Invalid password
+2026-01-10 09:01:58,auth,192.168.1.10,alice,LOGIN_FAIL,/login,,POST,401,Invalid password
+2026-01-10 09:02:10,auth,192.168.1.10,alice,LOGIN_FAIL,/login,,POST,401,Invalid password
+2026-01-10 09:02:30,auth,192.168.1.10,alice,LOGIN_SUCCESS,/login,,POST,200,
+2026-01-10 09:03:02,web,192.168.1.15,bob,PAGE_VIEW,/product?id=4,,GET,200,
+2026-01-10 09:03:25,web,192.168.1.15,bob,PAGE_VIEW,/product?id=5,,GET,200,
+2026-01-10 09:03:48,web,192.168.1.15,bob,PAGE_VIEW,/cart,,GET,200,
+2026-01-10 09:04:10,web,192.168.1.18,,PAGE_VIEW,/admin,,GET,403,Access denied
+2026-01-10 09:04:45,web,192.168.1.20,,PAGE_VIEW,/product?id=5 OR 1=1,,GET,500,DB error
+2026-01-10 09:04:46,web,192.168.1.20,,PAGE_VIEW,/product?id=5 OR 1=1,,GET,500,DB error
+2026-01-10 09:05:10,web,192.168.1.22,,PAGE_VIEW,/search?q=apple,,GET,200,
+2026-01-10 09:05:25,web,192.168.1.22,,PAGE_VIEW,/search?q=<script>,,GET,200,Reflected input
+2026-01-10 09:05:40,web,192.168.1.22,,PAGE_VIEW,/search?q=<script>,,GET,200,Reflected input
+2026-01-10 09:06:00,auth,192.168.1.22,bob,LOGIN_FAIL,/login,,POST,401,User not found
+2026-01-10 09:06:20,auth,,bob,LOGIN_FAIL,/login,,POST,401,User not found
+2026-01-10 09:06:40,auth,192.168.1.22,bob,LOGIN_SUCCESS,/login,,POST,200,
+2026-01-10 09:07:05,auth,192.168.1.50,admin1,LOGIN_SUCCESS,/admin,,POST,200,
+2026-01-10 09:07:10,auth,192.168.1.50,admin1,LOGIN_SUCCESS,/admin,,POST,200,Duplicate login
+2026-01-10 09:07:30,web,192.168.1.50,admin1,PAGE_VIEW,/admin/dashboard,,GET,200,
+2026-01-10 09:08:01,web,192.168.1.33,,PAGE_VIEW,/product?id=9,,GET,200,
+2026-01-10 09:08:12,web,192.168.1.33,,PAGE_VIEW,/product?id=9,,GET,200,Duplicate
+2026-01-10 09:08:25,web,192.168.1.33,,PAGE_VIEW,/product?id=10,,GET,200,
+2026-01-10 09:08:40,web,192.168.1.35,,PAGE_VIEW,/login,,GET,200,
+2026-01-10 09:08:55,auth,192.168.1.35,testuser,LOGIN_FAIL,/login,,POST,401,Account disabled
+2026-01-10 09:09:10,web,192.168.1.40,,PAGE_VIEW,/search?q=banana,,GET,200,
+2026-01-10 09:09:22,web,192.168.1.40,,PAGE_VIEW,/search?q=banana,,GET,200,Duplicate
+2026-01-10 09:09:35,web,192.168.1.41,,PAGE_VIEW,/product?id=11,,GET,200,
+2026-01-10 09:09:50,web,192.168.1.41,,PAGE_VIEW,/product?id=11 OR 1=1,,GET,500,DB error
+2026-01-10 09:10:05,web,192.168.1.41,,PAGE_VIEW,/product?id=11 OR 1=1,,GET,500,DB error
+2026-01-10 09:10:20,auth,192.168.1.41,,LOGIN_FAIL,/login,,POST,401,Missing username
+INVALID_TIMESTAMP,web,192.168.1.45,,PAGE_VIEW,/login,,GET,200,
+2026-01-10 09:10:55,web,,alice,PAGE_VIEW,/profile,,GET,200,Missing IP
+2026-01-10 09:11:10,auth,192.168.1.10,alice,LOGIN_SUCCESS,/login,,POST,200,
+2026-01-10 09:11:25,web,192.168.1.10,alice,PAGE_VIEW,/profile,,GET,200,
+2026-01-10 09:11:40,web,192.168.1.10,alice,PAGE_VIEW,/orders,,GET,200,
+2026-01-10 09:12:05,web,192.168.1.60,,PAGE_VIEW,/admin,,GET,403,
+2026-01-10 09:12:20,web,192.168.1.60,,PAGE_VIEW,/admin,,GET,403,Repeated attempt
+2026-01-10 09:12:35,web,192.168.1.60,,PAGE_VIEW,/admin,,GET,403,Repeated attempt
+2026-01-10 09:12:50,auth,192.168.1.60,,LOGIN_FAIL,/login,,POST,401,No username
+2026-01-10 09:13:05,web,192.168.1.70,,PAGE_VIEW,/search?q=<img>,,GET,200,Unescaped input
+2026-01-10 09:13:20,web,192.168.1.70,,PAGE_VIEW,/search?q=<img>,,GET,200,Unescaped input
+2026-01-10 09:13:35,web,192.168.1.75,,PAGE_VIEW,/product?id=15,,GET,200,
+2026-01-10 09:13:50,web,192.168.1.75,,PAGE_VIEW,/product?id=15,,GET,200,Duplicate
+2026-01-10 09:14:05,web,192.168.1.80,,PAGE_VIEW,/login,,GET,200,
+2026-01-10 09:14:20,auth,192.168.1.80,unknown,LOGIN_FAIL,/login,,POST,401,Unknown user
+2026-01-10 09:14:35,auth,192.168.1.80,unknown,LOGIN_FAIL,/login,,POST,401,Unknown user
+2026-01-10 09:14:50,auth,192.168.1.80,unknown,LOGIN_FAIL,/login,,POST,401,Unknown user
+2026-01-10 09:15:05,web,192.168.1.90,,PAGE_VIEW,/product?id=20,,GET,200,
+2026-01-10 09:15:20,web,192.168.1.90,,PAGE_VIEW,/product?id=20 OR 1=1,,GET,500,DB error
+2026-01-10 09:15:35,web,192.168.1.90,,PAGE_VIEW,/product?id=20 OR 1=1,,GET,500,DB error
+2026-01-10 09:15:50,web,192.168.1.95,,PAGE_VIEW,/search?q=test,,GET,200,
+2026-01-10 09:16:05,web,192.168.1.95,,PAGE_VIEW,/search?q=<svg>,,GET,200,Unescaped input
+2026-01-10 09:16:20,web,192.168.1.95,,PAGE_VIEW,/search?q=<svg>,,GET,200,Unescaped input
 
