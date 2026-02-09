@@ -2,8 +2,8 @@
 
 ## Risk Assessment Approach
 Risks identified during the penetration testing assessment were evaluated based on two primary factors:
-- **Impact**: The potential damage to the organization if the vulnerability were exploited
-- **Likelihood**: The probability of the vulnerability being exploited given existing controls
+- Impact: The potential damage to the organization if the vulnerability were exploited
+- Likelihood: The probability of the vulnerability being exploited given existing controls
 
 Each risk was assigned a qualitative rating of Low, Medium, or High.
 
@@ -17,18 +17,18 @@ Each risk was assigned a qualitative rating of Low, Medium, or High.
 ## Risk Analysis Details
 
 ### SQL Injection
-- **Impact**: High  
+- Impact: High  
   Unauthorized access to backend databases could lead to exposure or modification of sensitive data.
-- **Likelihood**: Medium  
+- Likelihood: Medium  
   The vulnerability is present in a publicly accessible endpoint, but exploitation requires specific input.
-- **Overall Risk**: High  
+- Overall Risk: High  
 
 ### Cross-Site Scripting (XSS)
-- **Impact**: Medium  
+- Impact: Medium  
   Successful exploitation could result in session hijacking or unauthorized actions on behalf of users.
-- **Likelihood**: Medium  
+- Likelihood: Medium  
   User input is reflected in application responses without sufficient encoding.
-- **Overall Risk**: Medium  
+- Overall Risk: Medium  
 
 ## Business Impact
 If left unaddressed, these vulnerabilities could negatively affect:
