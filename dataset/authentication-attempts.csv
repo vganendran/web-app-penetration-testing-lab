@@ -1,1 +1,6 @@
+timestamp,username,success
+2026-01-10 10:16:01,alice,false
+2026-01-10 10:16:10,alice,false
+2026-01-10 10:16:20,alice,false
+2026-01-10 10:16:45,alice,true
 
