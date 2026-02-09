@@ -55,5 +55,28 @@ The dataset does **not** contain real user data or production logs and is used s
 
 ---
 
+
+---
+
+## Skills Demonstrated
+- Ethical penetration testing
+- Web application security analysis
+- OWASP Top 10 risk mapping
+- Security risk assessment
+- Technical and executive reporting
+- Secure coding remediation strategies
+
+---
+
+## Ethical Disclaimer
+This project was conducted strictly for educational purposes in a controlled environment. No real-world systems, networks, or users were targeted or affected.
+
+---
+
+## Author
+**Varshini Ganendran**  
+Cybersecurity & Technology Risk Student  
+
+
 ## Repository Structure
 
