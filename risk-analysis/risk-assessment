@@ -16,14 +16,14 @@ Each risk was assigned a qualitative rating of Low, Medium, or High.
 
 ## Risk Analysis Details
 
-### SQL Injection
+## SQL Injection
 - Impact: High  
   Unauthorized access to backend databases could lead to exposure or modification of sensitive data.
 - Likelihood: Medium  
   The vulnerability is present in a publicly accessible endpoint, but exploitation requires specific input.
 - Overall Risk: High  
 
-### Cross-Site Scripting (XSS)
+## Cross-Site Scripting (XSS)
 - Impact: Medium  
   Successful exploitation could result in session hijacking or unauthorized actions on behalf of users.
 - Likelihood: Medium  
